@@ -1,0 +1,31 @@
+<div class="list" *ngFor="let item of arr" (click)="onMonitorClick(item.id)">
+  <h1 >{{ item.name }}</h1>
+</div>
+<button (click)="onBtnClick()">Click</button>
+<!-- <circle-progress *ngIf="loader"
+
+[percent] ="100"
+[radius] = "100"
+[outerStrokeWidth]="16"
+[innerStrokeWidth]="8"
+[outerStrokeColor]="'#78C000'"
+[innerStrokeWidth]="'#C7E896'"
+[animation]="true"
+[animationDuration]="500"
+></circle-progress> -->
+
+<!-- <ng-container>
+
+</ng-container> -->
+<div class="container" style="width: 'fit-content'">
+  <div class="data" *ngFor="let item of data"  (click)="onPost()" [@openClose]="loader ? 'open' : 'closed'" >
+    <p>{{  item.id }}</p>
+    <h1>{{ item.title }}</h1>
+    <ul>
+      <li *ngFor="let s of str" >
+        <h4 class="my">{{s}}</h4>
+      </li>
+    </ul>
+  </div>
+  <app-loader></app-loader>
+</div>
